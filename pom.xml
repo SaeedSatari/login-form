@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ir.ssatari</groupId>
-	<artifactId>task-three</artifactId>
+	<artifactId>login-form</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>login-form</name>
 	<description>Demo project for CompuGroup Medical</description>
