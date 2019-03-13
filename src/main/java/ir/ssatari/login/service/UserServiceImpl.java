@@ -1,8 +1,8 @@
-package ir.ssatari.taskthree.service;
+package ir.ssatari.login.service;
 
-import ir.ssatari.taskthree.dal.entity.User;
-import ir.ssatari.taskthree.dal.repository.RoleRepository;
-import ir.ssatari.taskthree.dal.repository.UserRepository;
+import ir.ssatari.login.dal.entity.User;
+import ir.ssatari.login.dal.repository.RoleRepository;
+import ir.ssatari.login.dal.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

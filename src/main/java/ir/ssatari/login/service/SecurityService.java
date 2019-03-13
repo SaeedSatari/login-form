@@ -1,4 +1,4 @@
-package ir.ssatari.taskthree.service;
+package ir.ssatari.login.service;
 
 public interface SecurityService {
     String findLoggedInUsername();

@@ -1,8 +1,8 @@
-package ir.ssatari.taskthree.service;
+package ir.ssatari.login.service;
 
-import ir.ssatari.taskthree.dal.entity.Role;
-import ir.ssatari.taskthree.dal.entity.User;
-import ir.ssatari.taskthree.dal.repository.UserRepository;
+import ir.ssatari.login.dal.entity.Role;
+import ir.ssatari.login.dal.entity.User;
+import ir.ssatari.login.dal.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,9 +1,9 @@
-package ir.ssatari.taskthree.controller;
+package ir.ssatari.login.controller;
 
-import ir.ssatari.taskthree.dal.entity.User;
-import ir.ssatari.taskthree.service.SecurityService;
-import ir.ssatari.taskthree.service.UserService;
-import ir.ssatari.taskthree.validator.UserValidator;
+import ir.ssatari.login.dal.entity.User;
+import ir.ssatari.login.service.SecurityService;
+import ir.ssatari.login.service.UserService;
+import ir.ssatari.login.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

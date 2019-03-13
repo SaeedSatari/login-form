@@ -1,6 +1,6 @@
-package ir.ssatari.taskthree.dal.repository;
+package ir.ssatari.login.dal.repository;
 
-import ir.ssatari.taskthree.dal.entity.User;
+import ir.ssatari.login.dal.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

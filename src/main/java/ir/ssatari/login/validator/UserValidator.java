@@ -1,7 +1,7 @@
-package ir.ssatari.taskthree.validator;
+package ir.ssatari.login.validator;
 
-import ir.ssatari.taskthree.dal.entity.User;
-import ir.ssatari.taskthree.service.UserService;
+import ir.ssatari.login.dal.entity.User;
+import ir.ssatari.login.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;

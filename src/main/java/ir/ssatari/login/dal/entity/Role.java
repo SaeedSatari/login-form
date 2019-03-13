@@ -1,4 +1,4 @@
-package ir.ssatari.taskthree.dal.entity;
+package ir.ssatari.login.dal.entity;
 
 import lombok.Data;
 

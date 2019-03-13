@@ -1,6 +1,6 @@
-package ir.ssatari.taskthree.service;
+package ir.ssatari.login.service;
 
-import ir.ssatari.taskthree.dal.entity.User;
+import ir.ssatari.login.dal.entity.User;
 
 public interface UserService {
     void save(User user);
