@@ -4,27 +4,25 @@ import ir.ssatari.login.dal.entity.User;
 import ir.ssatari.login.service.SecurityService;
 import ir.ssatari.login.service.UserService;
 import ir.ssatari.login.validator.UserValidator;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
+@AllArgsConstructor
 public class UserController {
-    @Autowired
-    private UserService userService;
 
-    @Autowired
-    private SecurityService securityService;
-
-    @Autowired
-    private UserValidator userValidator;
+    private final UserService userService;
+    private final SecurityService securityService;
+    private final UserValidator userValidator;
 
     @GetMapping("/registration")
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
-
         return "registration";
     }
 
@@ -37,9 +35,7 @@ public class UserController {
         }
 
         userService.save(userForm);
-
         securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
-
         return "redirect:/welcome";
     }
 

@@ -2,16 +2,17 @@ package ir.ssatari.login.validator;
 
 import ir.ssatari.login.dal.entity.User;
 import ir.ssatari.login.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 @Component
+@AllArgsConstructor
 public class UserValidator implements Validator {
-    @Autowired
-    private UserService userService;
+
+    private final UserService userService;
 
     @Override
     public boolean supports(Class<?> aClass) {

@@ -1,9 +1,9 @@
-package ir.ssatari.login.service;
+package ir.ssatari.login.service.impl;
 
 import ir.ssatari.login.dal.entity.Role;
 import ir.ssatari.login.dal.entity.User;
 import ir.ssatari.login.dal.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,9 +16,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService{
-    @Autowired
-    private UserRepository userRepository;
+@AllArgsConstructor
+public class UserDetailsServiceImpl implements UserDetailsService {
+
+    private final UserRepository userRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -27,7 +28,7 @@ public class UserDetailsServiceImpl implements UserDetailsService{
         if (user == null) throw new UsernameNotFoundException(username);
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        for (Role role : user.getRoles()){
+        for (Role role : user.getRoles()) {
             grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
         }
 
